@@ -11,16 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8]
+        python version: [3.8]
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python
+    - name: set up Python 
       uses: actions/setup-python@v4
-      with:
-        python-version: $
-         {{matrix.python-version}}
+      with: 
+        python-version: ${{matrix.python-version}}
+    
     - name: list
       run: python --version
-    # name: pip install
-    # run: pip install -r requirements.txt
-
+  #  - name: python version
+   #   run: python --version
+    #- name: pip install
+     # run: pip install -r requirements.txt
